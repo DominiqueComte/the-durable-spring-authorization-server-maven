@@ -16,3 +16,8 @@ See YouTube recording on https://www.youtube.com/watch?v=wq7oU2UCsbo
 * run `gateway/run.sh`
 
 Open http://127.0.0.1:8082/
+
+There are 2 user accounts:
+
+* jlong/password
+* rwinch/p@ssw0rd

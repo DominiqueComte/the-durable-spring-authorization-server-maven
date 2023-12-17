@@ -13,14 +13,14 @@ import org.springframework.messaging.MessageChannel;
 @Configuration
 class EmailRequestsIntegrationFlowConfiguration {
 
-	private final String destinationName = "emails";
+	private static final String DESTINATION_NAME = "emails";
 
 	@Bean
 	IntegrationFlow emailRequestsIntegrationFlow(MessageChannel requests, AmqpTemplate template) {
 		// <1>
 		var outboundAmqpAdapter = Amqp
 				.outboundAdapter(template)
-				.routingKey(this.destinationName);
+				.routingKey(DESTINATION_NAME);
 
 		return IntegrationFlow
 				.from(requests)// <2>
